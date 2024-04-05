@@ -1,0 +1,108 @@
+class Usuario {
+    constructor(nome, idade) {
+      this.nome = nome;
+      this.idade = idade;
+    }
+  }
+  const usuarios = [
+    new Usuario("Matheus", 21),
+    new Usuario("Henrique", 39),
+    new Usuario("Isaque", 25)
+  ];
+  const nomesMaiusculos = usuarios.map(usuario => usuario.nome.toUpperCase());
+  console.log("Nomes em maiúsculas:", nomesMaiusculos);
+
+  console.log("Números ímpares de 0 a 100:");
+  for (let i = 1; i <= 100; i += 2) {
+    console.log(i);
+  }
+  
+  const maioresDe18 = usuarios.filter(usuario => usuario.idade > 18);
+  console.log("Usuários com idade superior a 18 anos:", maioresDe18);
+  
+  const usuarioEntre25e30 = usuarios.find(usuario => usuario.idade >= 25 && usuario.idade <= 30);
+  console.log("Primeiro usuário com idade entre 25 e 30 anos:", usuarioEntre25e30);
+
+  const numeros = Array.from({ length: 101 }, (_, i) => i); // Array de 0 a 100
+  const numerosParesDobro = numeros.filter(num => num % 2 === 0).map(num => num * 2);
+  console.log("Números pares dobrados:", numerosParesDobro);
+
+  class Animal {
+    emitirSom() {
+      console.log("O animal emite um som.");
+    }
+  
+  }
+  
+  class Vaca extends Animal {
+    emitirSom() {
+      console.log("A vaca muge.");
+    }
+  }
+  
+  class Gato extends Animal {
+    emitirSom() {
+      console.log("O gato mia.");
+    }
+  }
+  
+  class Livro {
+    constructor(titulo, paginas) {
+      this.titulo = titulo;
+      this.paginas = paginas;
+    }
+  }
+  
+  const livros = [
+    new Livro("Livro 1", 400),
+    new Livro("Livro 2", 100),
+    new Livro("Livro 3", 800)
+  ];
+  
+  const livrosComMaisDe300Paginas = livros.filter(livro => livro.paginas > 300);
+  console.log("Livros com mais de 300 páginas:", livrosComMaisDe300Paginas);
+  
+  class Carro {
+    constructor(marca, ano) {
+      this.marca = marca;
+      this.ano = ano;
+    }
+  }
+  
+  const carros = [
+    new Carro("Jaguar", 2020),
+    new Carro("Cytroen", 2015),
+    new Carro("Toyota", 2006)
+  ];
+  
+  const primeiroToyotaApos2010 = carros.find(carro => carro.marca === "Toyota" && carro.ano > 2010);
+  console.log("Primeiro carro Toyota fabricado após 2010:", primeiroToyotaApos2010);
+  
+  class Produto {
+    constructor(nome, preco) {
+      this.nome = nome;
+      this.preco = preco;
+    }
+  }
+
+  const produtos = [
+    new Produto("Produto 1", 80),
+    new Produto("Produto 2", 140),
+    new Produto("Produto 3", 700)
+  ];
+  
+  const produtosComPrecoAumentado = produtos.map(produto => ({
+    nome: produto.nome,
+    preco: produto.preco * 1.1
+  }));
+  console.log("Produtos com preço aumentado em 10%:", produtosComPrecoAumentado);
+
+  const produtoCaro = produtos.find(produto => produto.preco > 100);
+  if (produtoCaro) {
+    produtoCaro.nome = "Produto Caro";
+  }
+  console.log("Primeiro produto com preço superior a R$ 100,00:", produtoCaro);
+  
+  const numerosDivisiveisPor3 = numeros.filter(num => num % 3 === 0).map(num => num * num);
+  console.log("Números divisíveis por 3 e elevados ao quadrado:", numerosDivisiveisPor3);
+  
