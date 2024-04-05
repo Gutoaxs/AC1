@@ -1,0 +1,36 @@
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .sidebar {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .content {
+    float: right;
+    width: 80%;
+    height: 100vh;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+  }
